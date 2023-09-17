@@ -5,23 +5,19 @@ import { useState } from 'react'
 import { useRouter } from 'next/router';
 
 const includedFeatures = [
-   'Ability to create Proposals'
- ,
+  'Proposal voting access',
    'Lend/Borrow money with the help Union Finance'
 
 ]
 const excludedFeatures = [
-  'Proposal voting access'
-   
+ 
+    'Ability to create Proposals'
 ]
 export default function daos() {
   const router = useRouter();
   const [githubId, setGithubId] = useState("")
   const signInWithEthereum = async (event: any) => {
     event.preventDefault()
-  setTimeout(() => {
-    setGithubId("KENILSHAHH")
-  }, 10000);
   }
   const routee = async (event: any) => {
     router.push('/joinDao')
